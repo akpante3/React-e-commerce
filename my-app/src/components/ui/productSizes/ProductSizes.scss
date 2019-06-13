@@ -11,21 +11,27 @@
   font-size: 12px;
   display: inline-block
 }
-.unselected-size {
-  background-color: $light-grey;
+.size-button {
   border-radius: 5px;
   width: 60px;
   padding: 0.5px 1px;
   margin: 4px 4px;
+  transition: all 0.5s ease 0s;
+}
+.unselected-size {
+  background-color: $light-grey;
   display: inline-block;
   cursor: pointer;
 }
+.unselected-size:hover {
+  background-color: rgb(141, 141, 141);
+}
+.selected-size:hover {
+  background-color: $light-pink; 
+}
+
 .selected-size {
   background-color:  $pink-color;
-  border-radius: 5px;
-  width: 60px;
-  padding: 0.5px 1px;
-  margin: 4px 4px;
   color: white;
   display: inline-block;
   cursor: pointer;

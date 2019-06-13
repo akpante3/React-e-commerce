@@ -2,6 +2,7 @@
 	border-radius: 30px;
 	font-size: 14px;
 	border: none;
+	transition: all 0.5s ease 0s;
 }
 .app-button-md {
 	width: 110px;
@@ -15,6 +16,9 @@
 	background-color: white ;
 	color: #f62e5e;
 	border: 1px #f62e5e solid;
+}
+button:hover {
+	background: #ffa6bb;
 }
 .pink-button {
 	background-color: #f62e5e;

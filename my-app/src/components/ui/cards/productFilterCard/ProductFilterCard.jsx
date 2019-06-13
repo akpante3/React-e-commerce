@@ -48,11 +48,15 @@ class productFilter extends Component {
             items
           </span>
           <div className='mt-3'>
-            <p>&times; Gender: men</p>
+            <p>
+              &times; Gender:
+              {' '}
+              <span>men</span>
+            </p>
             <p>
               &times; Catergory:
               {' '}
-              {selectedCategory}
+              <span>{selectedCategory}</span>
             </p>
           </div>
         </div>

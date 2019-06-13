@@ -16,7 +16,7 @@
   .nav-bar-logo {
     font-weight: 700;
     font-size: 25px;
-    color: #f62e5e
+    color: $pink-color
   }
   .nav-bottom-link {
     margin: 0px 15px;
@@ -46,6 +46,7 @@
     color: white;
     border: none;
     text-indent: 27px;
+    height: 36px;
     width: 300px;
   }
   ::placeholder {
@@ -55,8 +56,13 @@
   ul {
     li {
       margin-left: 15px;
+      transition: all 0.5s ease 0s; 
+    }
+    li:hover{
+      color: $meduim-grey;
     }
   }
+
   .nav-links {
     margin: 0 auto;
     cursor: pointer;
