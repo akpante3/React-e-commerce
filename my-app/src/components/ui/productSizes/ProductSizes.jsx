@@ -24,7 +24,10 @@ class productFilter extends Component {
     this.setState({
       selected: [...list],
     });
-    this.props.updateAttributes(list);
+
+    if (this.props.updateAttributes) {
+      this.props.updateAttributes(list);
+    }
   }
 
   render() {

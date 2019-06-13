@@ -6,6 +6,7 @@ import ModalImage from '../../ui/modals/modalImage/ModalImage';
 import './LandingPage.scss';
 import ProductFilterCard from '../../ui/cards/productFilterCard/ProductFilterCard';
 import ProductCard from '../../ui/cards/productCard/ProductCard';
+import Pagination from '../../ui/pagination/Pagination';
 
 
 import {
@@ -64,11 +65,15 @@ class LandingPage extends Component {
                     product={product}
                   />
                 </div>
-              ))
-              : null
+              )) : null
           }
           </div>
-          <br />
+          <div className="pagination text-center mt-5 mb-5">
+            <Pagination
+              count={products.count}
+              paginateProduct={this.paginateProduct}
+            />
+          </div>
           <ModalImage
             image='https://www.playgroundshop.com/upload/comunicazioni_home/190402_GALLERY_DONNA_EN.gif'
           />

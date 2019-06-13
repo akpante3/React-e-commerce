@@ -15,7 +15,7 @@ import { getProductsByCatergory, getAllProducts } from '../../../../store/action
 class productFilter extends Component {
   state = {
     categoryId: '',
-    category: 'All products',
+    selectedCategory: 'All products',
   }
 
   onHandleCheck = (e) => {
@@ -29,13 +29,13 @@ class productFilter extends Component {
     const categoryDetails = this.props.categories.find(
       category => category.category_id == this.state.categoryId,
     );
-    this.setState({ category: categoryDetails.name });
+    this.setState({ selectedCategory: categoryDetails.name });
   }
 
 
   render() {
     const { categories, count } = this.props;
-    const { category } = this.state;
+    const { selectedCategory } = this.state;
 
     return (
       <div className="product-filter-card">
@@ -45,15 +45,14 @@ class productFilter extends Component {
             {' '}
             {count}
             {' '}
-             items
-            {' '}
+            items
           </span>
           <div className='mt-3'>
             <p>&times; Gender: men</p>
             <p>
               &times; Catergory:
               {' '}
-              {category}
+              {selectedCategory}
             </p>
           </div>
         </div>

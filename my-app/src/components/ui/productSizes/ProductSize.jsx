@@ -10,14 +10,13 @@ class Size extends Component {
   }
 
   handleClick = (size) => {
-    console.log(size, '-------__');
     const data = { ...this.state };
     this.setState({ selected: !data.selected });
     this.props.selectedAttributes(size, !data.selected);
   }
 
   render() {
-    const { size, id } = this.props;
+    const { size } = this.props;
     return (
       <div onClick={() => { this.handleClick(size); }} className={this.state.selected ? 'selected-size' : 'unselected-size'}>
         <div className='size-option text-center'>{size}</div>

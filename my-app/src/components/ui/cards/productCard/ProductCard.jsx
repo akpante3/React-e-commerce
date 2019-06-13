@@ -47,7 +47,12 @@ class ProductCard extends Component {
                   value={product.product_id}
                   buttonClickHandler={this.buttonClickHandler}
                 />
-              ) : <p className="mb-2 price">{product.price}</p>}
+              ) : (
+                <p className="mb-2 price">
+                  &#163;
+                  {product.price}
+                </p>
+              )}
           </div>
         </div>
       </CSSTransition>
