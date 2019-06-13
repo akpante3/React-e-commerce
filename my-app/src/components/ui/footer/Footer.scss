@@ -1,0 +1,52 @@
+@import '../../../styles/variables.scss';
+
+.footer {
+  width: 100%;
+  background-color: $black;
+  padding-top: 30px;
+  padding: 30px;
+  .trade-mark {
+    color:  #7e7e7e;
+  }
+}
+.footer-links {
+  list-style: none;
+  span {
+    color: white;
+    margin: 0px 50px;
+    font-weight: 500;
+    font-size: 27px;
+    cursor: pointer;
+  }
+}
+
+.footer-icons {
+  margin-top:20px;
+  span {
+    background-color: white;
+    font-size: 14px;
+    color: #2e2e2e;
+    margin: 0px 20px;
+    padding: 10px;
+    border-radius: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-links {
+    span {
+      margin: 0;
+      font-weight: 500;
+      display:block;
+      font-size: 21px;
+    }
+  }
+  .footer-icons {
+    span {
+      background-color: white;
+      font-size: 14px;
+      color: #2e2e2e;
+      margin: 4px;
+    }
+  }
+}

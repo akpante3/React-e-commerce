@@ -1,0 +1,19 @@
+.nav-top-items {
+  width:100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  .nav-top-link {
+    margin: 0px 5px;
+    cursor: pointer;
+    // font-weight: 600;
+  }
+  .shopping-cart {
+    padding: 5px;
+  }
+  .nav-auth-section{
+    span {
+      color: #f62e5e
+    }
+  }
+  
+}

@@ -1,0 +1,48 @@
+@import '../../../styles//variables.scss';
+
+.shopping-bag-section {
+  position: relative;
+  .shopping-bag {
+    font-size: 22px;
+    margin-top: 14px;
+    margin-right: 14px;
+    color: $light-grey
+  }
+  .bag-display-none {
+    display: none;
+  }
+  .cart-count{
+    width: 24px;
+    border-radius: 50%;
+    position: absolute;
+    right: 2%;
+    bottom: 53%;
+    span {
+      // color: #f62e5e;
+      font-size: 14px;
+      font-weight: 700
+    }
+  }
+  .top-nav-count {
+    .cart-count{
+    background-color: #f62e5e;
+      span {
+        color: white;
+      }
+      .shopping-bag {
+        color: black
+      }
+    }
+  }
+  .bottom-nav-count {
+    .cart-count{
+        background-color: white;
+      span {
+        color: #f62e5e;
+      }
+      .shopping-bag {
+        color: black
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../../styles/variables.scss";
+
+.main-layout {
+  background-color: $background-color;
+  height: 100%;
+  .main-layout-children {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+

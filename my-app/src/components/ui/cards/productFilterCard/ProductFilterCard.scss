@@ -1,0 +1,54 @@
+@import '../../../../styles//variables.scss';
+
+.product-filter-card {
+  width: 250px;
+  box-sizing: border-box;
+  background-color: $white-color; 
+  .filter-card-body {
+    padding: 20px;
+    box-shadow: 0px 1px 1px 0.5px rgba(80, 80, 80, 0.2);
+    box-sizing: border-box;
+    min-height: 600px
+  }
+  .filter-card {
+    background-color: rgb(247, 247, 247);
+    width: 100%;
+    box-shadow: 0px 1px 1px 0.5px rgba(80, 80, 80, 0.2);
+  }
+  .filter-card-header {
+    height: 150px;
+    padding: 10px;
+    background-color: light-grey;
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: $light-grey;
+    }
+  }
+  .filter-card-bottom {
+    height: 60px;
+    padding: 10px;
+    span {
+      color: #6c6c6c;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .clear-button {
+      color: $pink-color;
+      cursor: pointer;
+    }
+  }
+  span {
+    color: #6c6c6c;
+    font-size: 16px;
+  }
+  .filter-cartegories {
+    span {
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .category-link {
+      margin-left: 6px;
+    }
+  }
+}
