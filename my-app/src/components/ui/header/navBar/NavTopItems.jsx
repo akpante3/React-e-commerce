@@ -6,7 +6,7 @@ import './NavBar.scss';
 import ShoppingBag from '../../ShoppingBag/ShoppingBag';
 // import { getProductsByDepartment } from '../../../../actions/GetProducts';
 import './NavTopItems.scss';
-// import { removeToken } from '../../../../config/localStorageConfig';
+import { removeToken } from '../../../../config/localStorageConfig';
 
 
 /**
@@ -25,15 +25,16 @@ class NavTopItems extends Component {
     this.props.toggleCartModal();
   };
 
-  // logOut = () => {
-  //   removeToken();
-  // };
+  logOut = () => {
+    removeToken();
+  };
 
   render() {
+    const { authUser } = this.props;
     return (
       <div className="nav-top-items">
         <div className="nav-auth-section">
-          {/* { !authUser.customer_id
+          { !authUser.customer_id
             ? (
               <div>
                  hi
@@ -51,12 +52,7 @@ class NavTopItems extends Component {
                 <span onClick={() => this.logOut('signIn')}> logOut </span>
               </div>
             )
-      } */}
-          <div>
-            hi!
-            {/* {authUser.name} */}
-            <span onClick={() => this.logOut('signIn')}> logOut </span>
-          </div>
+      }
         </div>
         <div className="mt-1">
           flag $
@@ -75,4 +71,8 @@ class NavTopItems extends Component {
   }
 }
 
-export default connect()(NavTopItems);
+const mapStateToProps = state => ({
+  authUser: state.authUser.authUser,
+});
+
+export default connect(mapStateToProps)(NavTopItems);

@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import NavBottomItems from './NavBottomItem';
 import NavTopItems from './NavTopItems';
+import AuthModal from '../../modals/authModal/AuthModal';
 
 /**
- * @param
+ * [NavBar]: the class base component comprise of the 2 sections of the navbar
  */
 class NavBar extends Component {
   state = {
     showAuthModal: false,
-    showCartModal: false,
+    // showCartModal: false,
     modal: '',
   }
 
@@ -22,16 +23,23 @@ class NavBar extends Component {
     return this.state.modal;
   }
 
-  toggleCartModal = () => {
-    this.setState(prevState => ({
-      showCartModal: !prevState.showCartModal,
-    }));
-    return this.state.modal;
-  }
+  // toggleCartModal = () => {
+  //   this.setState(prevState => ({
+  //     showCartModal: !prevState.showCartModal,
+  //   }));
+  //   return this.state.modal;
+  // }
 
   render() {
     return (
       <div>
+        { this.state.showAuthModal
+          ? (
+            <AuthModal
+              toggleAuthModal={this.toggleAuthModal}
+              form={this.state.modal}
+            />
+          ) : null}
         <div className="navbar navbar-top">
           <NavTopItems
             toggleAuthModal={this.toggleAuthModal}
