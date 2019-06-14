@@ -1,3 +1,5 @@
+@import '../../../../styles/variables.scss';
+
 .app-button {
 	border-radius: 30px;
 	font-size: 14px;
@@ -18,7 +20,7 @@
 	border: 1px #f62e5e solid;
 }
 button:hover {
-	background: #ffa6bb;
+	background: $dark-pink;
 }
 .pink-button {
 	background-color: #f62e5e;

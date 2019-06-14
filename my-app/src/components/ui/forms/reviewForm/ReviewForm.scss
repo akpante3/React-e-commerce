@@ -1,0 +1,68 @@
+
+.review-form-section {
+  width: 100%;
+  .review-product {
+    textarea {
+      width: 500px;
+      height: 150px   
+    }
+  }
+  .review-nickname {
+    input {
+      width: 350px
+    }
+  }
+}
+.review-input-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media only screen and (max-width: 900px) {
+  .review-form-section {
+    .review-product {
+      textarea {
+        width: 380px;
+        height: 150px   
+      }
+    }
+    .review-nickname {
+      input {
+        width: 250px
+      }
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .review-form-section {
+    .review-product {
+      textarea {
+        width: 200px;
+        height: 120px   
+      }
+    }
+    .review-nickname {
+      input {
+        width: 150px
+      }
+    }
+  }
+}
+@media only screen and (max-width: 330px) {
+  .review-form-section {
+    .review-product {
+      textarea {
+        width: 150px;
+        height: 100px   
+      }
+    }
+    .review-nickname {
+      input {
+        width: 150px
+      }
+    }
+  }
+  .review-input-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}

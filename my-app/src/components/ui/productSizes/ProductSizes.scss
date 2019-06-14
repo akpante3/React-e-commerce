@@ -19,15 +19,15 @@
   transition: all 0.5s ease 0s;
 }
 .unselected-size {
-  background-color: $background-color;
+  background-color: $icon-background;
   display: inline-block;
   cursor: pointer;
 }
 .unselected-size:hover {
-  background-color: rgb(141, 141, 141);
+  background-color: $light-grey;
 }
 .selected-size:hover {
-  background-color: $light-pink; 
+  background-color: $dark-pink; 
 }
 
 .selected-size {
