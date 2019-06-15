@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import StarRating from '../../starRatings/StarRatings';
-// import { generateShoppingId, addToCart } from '../../../actions/ShoppingCart';
+import { generateShoppingId, addToCart } from '../../../../store/actions/ShoppingCart';
 import ColorsPick from '../../colorsPick/ColorsPick/ColorsPick';
 import ProductSizes from '../../productSizes/ProductSizes';
 import QuantityController from '../../quantityController/QuantityController';
@@ -16,23 +16,23 @@ class SingleProductInfo extends Component {
     attributes: 'M',
   }
 
-  // addToCart = () => {
-  //   const { singleproduct } = this.props;
-  //   const cartId = localStorage.getItem('cart_id');
-  //   const productDetials = {
-  //     cart_id: cartId,
-  //     product_id: singleproduct.product_id,
-  //     attributes: this.state.attributes,
-  //   };
-  //   if (!cartId) {
-  //     this.props.actions.generateShoppingId(productDetials);
-  //   } else {
-  //     this.props.actions.addToCart(productDetials);
-  //   }
-  // }
+  addToCart = () => {
+    const { singleproduct } = this.props;
+    const cartId = localStorage.getItem('cart_id');
+    const productDetials = {
+      cart_id: cartId,
+      product_id: singleproduct.product_id,
+      attributes: this.state.attributes,
+    };
+    if (!cartId) {
+      this.props.actions.generateShoppingId(productDetials);
+    } else {
+      this.props.actions.addToCart(productDetials);
+    }
+  }
 
   updateAttributes = (list) => {
-    this.setState({ attributes: JSON.stringify(list) });
+    this.setState({ attributes: list.join(' ') });
     console.log(this.state.attributes, 'these are attributes');
   }
 
@@ -96,7 +96,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
-    { },
+    { generateShoppingId, addToCart },
     dispatch,
   ),
 });

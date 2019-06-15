@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
 // import { connect } from 'react-redux';
 import './AuthModal.scss';
 import SignInForm from '../../forms/AuthForms/signin/SignInForm';
@@ -32,20 +33,27 @@ class AuthModal extends Component {
     const { authUser } = this.props;
     const { form } = this.state;
     return (
-      <Fragment>
-        <div className={authUser.customer_id ? 'close-wrapper' : 'auth-modal-wrapper'}>
-          <div className="auth-modal">
-            <div
-              onClick={() => this.closeAuthModal()}
-              className="text-right close-modal"
-              key='click'
-            >
+      <CSSTransition
+        in
+        appear
+        timeout={2000}
+        classNames="enter"
+      >
+        <Fragment>
+          <div className={authUser.customer_id ? 'close-wrapper' : 'auth-modal-wrapper'}>
+            <div className="auth-modal">
+              <div
+                onClick={() => this.closeAuthModal()}
+                className="text-right close-modal"
+                key='click'
+              >
             &times;
+              </div>
+              { form === 'signIn' ? <SignInForm toggleAuthForms={this.toggleAuthForms} /> : <SignUpForm toggleAuthForms={this.toggleAuthForms} />}
             </div>
-            { form === 'signIn' ? <SignInForm toggleAuthForms={this.toggleAuthForms} /> : <SignUpForm toggleAuthForms={this.toggleAuthForms} />}
           </div>
-        </div>
-      </Fragment>
+        </Fragment>
+      </CSSTransition>
     );
   }
 }

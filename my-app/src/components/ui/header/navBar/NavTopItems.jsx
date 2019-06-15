@@ -3,7 +3,7 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import './NavBar.scss';
-import ShoppingBag from '../../ShoppingBag/ShoppingBag';
+import ShoppingBag from '../../shoppingBag/ShoppingBag';
 // import { getProductsByDepartment } from '../../../../actions/GetProducts';
 import './NavTopItems.scss';
 import { removeToken } from '../../../../config/localStorageConfig';

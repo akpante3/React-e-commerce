@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { CSSTransition } from 'react-transition-group';
 import './SingleProductPage.scss';
 import SingleProductImage from '../../ui/singleProduct/singleProductImage/SingleProductImage';
 import { getAProduct } from '../../../store/actions/GetProducts';
@@ -27,25 +28,32 @@ render() {
       {
       singleproduct
         ? (
-          <div className="single-page-display">
-            <div className="single-page-product-display">
-              <div>
-                <SingleProductImage
-                  images={productImages}
-                />
+          <CSSTransition
+            in
+            appear
+            timeout={3000}
+            classNames="fade"
+          >
+            <div className="single-page-display">
+              <div className="single-page-product-display">
+                <div>
+                  <SingleProductImage
+                    images={productImages}
+                  />
+                </div>
+                <div>
+                  <SingleProductInfo />
+                </div>
               </div>
-              <div>
-                <SingleProductInfo />
+              <div className="single-page-product-review mt-5">
+                <div>
+                  <ReviewForm
+                    productId={this.props.match.params.productId}
+                  />
+                </div>
               </div>
             </div>
-            <div className="single-page-product-review mt-5">
-              <div>
-                <ReviewForm
-                  productId={this.props.match.params.productId}
-                />
-              </div>
-            </div>
-          </div>
+          </CSSTransition>
         )
         : <p>loading!</p>
     }

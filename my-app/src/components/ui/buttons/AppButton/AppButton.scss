@@ -21,6 +21,8 @@
 }
 button:hover {
 	background: $dark-pink;
+	border: 1px $dark-pink solid;
+	color: $white-color;
 }
 .pink-button {
 	background-color: #f62e5e;

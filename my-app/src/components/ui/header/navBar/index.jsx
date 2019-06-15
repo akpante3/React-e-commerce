@@ -4,6 +4,9 @@ import { withRouter } from 'react-router-dom';
 import NavBottomItems from './NavBottomItem';
 import NavTopItems from './NavTopItems';
 import AuthModal from '../../modals/authModal/AuthModal';
+import ShoppingCartModal from '../../modals/shoppingCartModal/ShoppingCartModal';
+import ShoppingCartItems from '../../shoppingCartItems/ShoppingCartItems';
+import './NavBar.scss';
 
 /**
  * [NavBar]: the class base component comprise of the 2 sections of the navbar
@@ -11,7 +14,7 @@ import AuthModal from '../../modals/authModal/AuthModal';
 class NavBar extends Component {
   state = {
     showAuthModal: false,
-    // showCartModal: false,
+    showCartModal: false,
     modal: '',
   }
 
@@ -23,22 +26,33 @@ class NavBar extends Component {
     return this.state.modal;
   }
 
-  // toggleCartModal = () => {
-  //   this.setState(prevState => ({
-  //     showCartModal: !prevState.showCartModal,
-  //   }));
-  //   return this.state.modal;
-  // }
+  toggleCartModal = () => {
+    this.setState(prevState => ({
+      showCartModal: !prevState.showCartModal,
+    }));
+    return this.state.modal;
+  }
 
   render() {
+    const { showAuthModal } = this.state;
     return (
       <div>
-        { this.state.showAuthModal
+        { showAuthModal
           ? (
+
             <AuthModal
               toggleAuthModal={this.toggleAuthModal}
               form={this.state.modal}
+              showAuthModal={showAuthModal}
             />
+
+          ) : null}
+
+        { this.state.showCartModal
+          ? (
+            <ShoppingCartModal toggleCartModal={this.toggleCartModal}>
+              <ShoppingCartItems />
+            </ShoppingCartModal>
           ) : null}
         <div className="navbar navbar-top">
           <NavTopItems

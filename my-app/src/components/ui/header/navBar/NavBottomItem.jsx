@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import './NavBar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import ShoppingBag from '../../ShoppingBag/ShoppingBag';
+import ShoppingBag from '../../shoppingBag/ShoppingBag';
 import { getCategories } from '../../../../store/actions/GetCategories';
 import { getProductsByDepartment } from '../../../../store/actions/GetProducts';
 
