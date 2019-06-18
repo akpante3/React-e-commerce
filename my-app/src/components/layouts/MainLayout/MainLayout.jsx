@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import PropsTypes from 'prop-types';
 import Header from '../../ui/header/Header';
 import Footer from '../../ui/footer';
 import { getDepartments } from '../../../store/actions/GetDepartments';
@@ -35,10 +34,6 @@ class MainLayout extends Component {
     );
   }
 }
-
-MainLayout.propTypes = {
-  children: PropsTypes.element.isRequired,
-};
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(

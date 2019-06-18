@@ -27,8 +27,6 @@ export default (state = initialState, action) => {
         ...state,
         updatedCartItems: [...action.payload],
       };
-
-
     default:
       return state;
   }

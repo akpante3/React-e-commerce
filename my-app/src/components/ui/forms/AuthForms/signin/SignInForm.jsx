@@ -17,7 +17,9 @@ state = {
 }
 
 onChangeHandler = (e) => {
-  this.props.actions.eraseAuthError();
+  if (this.props.authError) {
+    this.props.actions.eraseAuthError();
+  }
   this.setState({
     [e.target.name]: e.target.value,
   });

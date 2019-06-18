@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -21,8 +22,10 @@ class ReviewForm extends Component {
     });
   }
 
-  submitReviewForm = () => {
-
+  toggleReview = () => {
+    this.setState(prevState => ({
+      showReviews: !prevState.showReviews,
+    }));
   }
 
   render() {
@@ -33,6 +36,7 @@ class ReviewForm extends Component {
       <div className="review-form-section">
         <div className="users-review">
           <h5>Product Review</h5>
+          <div className="review-button" onKeyDown={this.toggleReview} onClick={() => this.toggleReview()}>{ showReviews ? 'Hide Reviews ' : 'Show Reviews' }</div>
           <br />
           { showReviews
             ? reviews.map(review => (

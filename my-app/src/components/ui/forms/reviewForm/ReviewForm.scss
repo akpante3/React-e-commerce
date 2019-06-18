@@ -1,4 +1,4 @@
-
+@import '../../../../styles/variables.scss';
 .review-form-section {
   width: 100%;
   .review-product {
@@ -6,6 +6,20 @@
       width: 500px;
       height: 150px   
     }
+  }
+  .review-button {
+    padding: 5px;
+    color: $white-color;
+    font-weight: 400;
+    font-size: 18px;
+    color: $pink-color;
+    transition: all 1s ease 0s;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .review-button:hover {
+    background-color: $pink-color;
+    color: $white-color;
   }
   .review-nickname {
     input {

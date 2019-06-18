@@ -42,6 +42,12 @@ export default (state = initialState, action) => {
         productType: 'single-product',
         singleProduct: action.payload,
       };
+
+    case ACTIONS.SEARCH_PRODUCT:
+      return {
+        productType: 'search-product',
+        products: [...action.payload.rows],
+      };
     default:
       return state;
   }

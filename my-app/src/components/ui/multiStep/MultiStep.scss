@@ -1,0 +1,55 @@
+.step-progress {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+    div {
+        transition: all 0.5s ease 0s; 
+    }
+    .step-progress-circle {
+        width:20px;
+        display: block;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0 auto;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1)
+    }
+    div.step-progress-checked {
+        background-color: #f62e5e;
+        transition: all 2s ease-in-out 0s; 
+    }
+    div.step-progress-unchecked {
+        background-color: rgb(214, 214, 214);      
+    }
+    .step-progress-line {
+        width: 100%;
+        height: 5px;
+        margin-top: 6px;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1)
+    }
+}
+.step-progress-checked-text {
+    color: #f62e5e;
+}
+.step-progress-unchecked-text {
+    color: rgb(214, 214, 214);        
+}
+.step-progress-text { 
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+}
+
+@media only screen and (max-width: 900px) {
+    .step-progress-text {
+      div {
+        font-size: 16px;
+      }
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .step-progress-text {
+      div {
+        font-size: 12px;
+      }
+    }
+  }

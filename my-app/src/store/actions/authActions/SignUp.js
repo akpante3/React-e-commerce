@@ -1,3 +1,4 @@
+import { toastr } from 'react-redux-toastr';
 import axiosIntance from '../../../config/http';
 import actionResponse from '../actionResponse';
 import ACTIONS from '../actionType';
@@ -14,7 +15,8 @@ export const signUpUser = userDetials => dispatch => axiosIntance.post('/custome
   }).catch((err) => {
     if (err.response && err.response.data.error) {
       const { field, message } = err.response.data.error;
-      dispatch(actionResponse(ACTIONS.AUTH_USER_ERROR, { field, message }));
+      toastr.error(`ERROR Field: ${field}`, message);
+      // dispatch(actionResponse(ACTIONS.AUTH_USER_ERROR, { field, message }));
     } else {
       dispatch(actionResponse(ACTIONS.AUTH_USER_ERROR, { message: 'An error occured' }));
     }

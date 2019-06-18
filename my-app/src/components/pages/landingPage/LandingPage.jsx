@@ -7,6 +7,7 @@ import './LandingPage.scss';
 import ProductFilterCard from '../../ui/cards/productFilterCard/ProductFilterCard';
 import ProductCard from '../../ui/cards/productCard/ProductCard';
 import Pagination from '../../ui/pagination/Pagination';
+import Spinner from '../../ui/Spinner/Spinner';
 
 
 import {
@@ -39,7 +40,7 @@ class LandingPage extends Component {
 
   render() {
     const { products } = this.props;
-    return (
+    return (products ? (
       <CSSTransition
         in
         appear
@@ -60,7 +61,10 @@ class LandingPage extends Component {
             {
             products.products
               ? products.products.map(product => (
-                <div className="landing-page-product">
+                <div
+                  className="landing-page-product"
+                  key={product.product_id}
+                >
                   <ProductCard
                     product={product}
                   />
@@ -79,6 +83,7 @@ class LandingPage extends Component {
           />
         </div>
       </CSSTransition>
+    ) : <Spinner />
     );
   }
 }

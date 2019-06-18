@@ -1,4 +1,3 @@
-/* eslint-disable react/no-access-state-in-setstate */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
@@ -13,7 +12,9 @@ class ProductCard extends Component {
   }
 
   handleMouseHover = () => {
-    this.setState({ buttonVisibility: !this.state.buttonVisibility });
+    this.setState(prevState => ({
+      buttonVisibility: !prevState.buttonVisibility,
+    }));
   }
 
   buttonClickHandler = (payload) => {

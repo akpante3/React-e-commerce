@@ -9,6 +9,7 @@ import SingleProductImage from '../../ui/singleProduct/singleProductImage/Single
 import { getAProduct } from '../../../store/actions/GetProducts';
 import SingleProductInfo from '../../ui/singleProduct/singleProductInfo/SingleProductInfo';
 import ReviewForm from '../../ui/forms/reviewForm/ReviewForm';
+import Spinner from '../../ui/Spinner/Spinner';
 
 class SingleProductPage extends Component {
 state = {}
@@ -55,7 +56,7 @@ render() {
             </div>
           </CSSTransition>
         )
-        : <p>loading!</p>
+        : <Spinner />
     }
     </div>
   );

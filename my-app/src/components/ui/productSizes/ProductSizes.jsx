@@ -35,7 +35,7 @@ class productFilter extends Component {
       <div className="text-center sizes row col-md-12">
         {
          this.state.colors.map(data => (
-           <div>
+           <div key={data.id}>
              <ProductSize
                size={data.size}
                id={data.id}

@@ -12,17 +12,10 @@ class ShoppingCartItems extends Component {
   state = {
   }
 
-  componentDidMount() {
-    const cartId = localStorage.getItem('cart_id');
-    if (!cartId) {
-      this.props.actions.generateShoppingId();
-    } else {
-      this.props.actions.getShoppingCartItems(cartId);
-    }
-  }
 
   render() {
     const { shoppingCartItems } = this.props;
+    console.log(shoppingCartItems, 'items');
     return (
       <div>
         <div className="shopping-cart-headers mb-4 pb-1">
@@ -31,9 +24,11 @@ class ShoppingCartItems extends Component {
           <div className="shopping-cart-header">Quantity</div>
           <div className="text-right">Price</div>
         </div>
-        { shoppingCartItems.length > 0 ? shoppingCartItems.map((item) => {
-          return (<ShoppingCartItem cartItem={item} id={item.id} />);
-        }) : null }
+        <div className="displayed-cart-items">
+          { shoppingCartItems.length > 0 ? shoppingCartItems.map((item) => {
+            return (<ShoppingCartItem cartItem={item} id={item.id} />);
+          }) : null }
+        </div>
       </div>
     );
   }
@@ -52,13 +47,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartItems);
-
-
-// attributes: "lg"
-// image: "coat-of-arms.gif"
-// item_id: 15077
-// name: "Coat of Arms"
-// price: "14.50"
-// product_id: 3
-// quantity: 5
-// subtotal: "72.50"

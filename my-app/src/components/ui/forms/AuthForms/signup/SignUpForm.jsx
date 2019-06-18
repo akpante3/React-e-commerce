@@ -20,7 +20,9 @@ state = {
 }
 
 onChangeHandler = (e) => {
-  this.props.actions.eraseAuthError();
+  if (this.props.authError) {
+    this.props.actions.eraseAuthError();
+  }
   this.setState({
     [e.target.name]: e.target.value,
   });
@@ -38,7 +40,7 @@ render() {
   const { authError } = this.props;
   return (
     <div>
-      {authError && authError.message ? toastr.error('An Error Occurred', authError.message) : null}
+      {authError && authError.message ? toastr.error('An Error Occurred', authError.message) : null }
       <div className="text-center">
         <div className='sign-in-header'>Sign Up</div>
         <div className="sign-in-inputs mt-3">

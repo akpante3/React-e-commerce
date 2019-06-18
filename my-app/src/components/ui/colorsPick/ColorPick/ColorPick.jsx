@@ -1,6 +1,4 @@
-
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
 import './ColorPick.scss';
 
@@ -19,6 +17,7 @@ class ColorPick extends Component {
     return (
       <div
         onClick={() => { this.handleClick(); }}
+        onKeyDown={this.handleClick}
         style={colorStyle}
         className={`color-option ${this.state.selected ? 'selected-color' : null}`}
       />

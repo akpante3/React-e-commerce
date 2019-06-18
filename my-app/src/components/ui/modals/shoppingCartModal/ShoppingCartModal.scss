@@ -51,3 +51,36 @@
   transform: translateX(0);
   transition: opacity 1000ms, transform 1000ms;
 }
+
+@media only screen and (max-width: 1100px) {
+  .product-modal { 
+    .product-modal-content {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .product-modal { 
+    .product-modal-content {
+      width: 97%;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .product-modal { 
+    .product-modal-content {
+      .product-modal-children {
+        padding: 5px;
+      }
+    }
+  }
+  .close-modal {
+    padding: 3px 5px;
+    .close-modal-icon {
+      font-weight: 200;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}

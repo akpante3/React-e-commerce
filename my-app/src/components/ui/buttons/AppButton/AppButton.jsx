@@ -6,7 +6,9 @@ const AppButton = ({
   title, color, buttonClickHandler, value,
 }) => {
   const onClickHandler = () => {
-    buttonClickHandler(value);
+    if (buttonClickHandler) {
+      buttonClickHandler(value);
+    }
   };
 
   const data = (

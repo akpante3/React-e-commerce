@@ -1,0 +1,87 @@
+@import '../../../../styles//variables.scss';
+.confirmation-form {
+	width: 100%;
+	.confirmation-form-detail {
+    display: grid;
+		grid-gap: 5%;
+		// height: 300px;
+		padding-bottom: 30px;
+    grid-template-columns: 2fr 1fr;
+    .order-summary {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr;
+      padding: 7px 5px;
+    }
+}
+    
+.order-list div {
+  font-weight: 500;
+}
+.order-lists {
+	overflow-x: hidden; 
+	overflow-x: auto; 
+	text-align:justify;
+  min-height: 200px;
+  max-height: 230px;
+  overflow: scroll;
+  div {
+    font-weight: 400;
+  }
+  .subtotal {
+    color: $pink-color;
+  }
+}
+
+.order-header {
+  div {
+    color: $light-grey;
+  }
+}
+.summary-footer {
+  p {
+    color: $light-grey;
+  }
+}
+.delivery-details {
+	display: grid;
+	grid-auto-rows: 50%;
+	height: 238px;
+	.delivery-details-header {
+    padding: 7px 0px;
+    color: $light-grey;
+  }
+  span {
+    font-weight: 400;    
+  }
+}
+.order-lists .order-summary:nth-child(even) {
+	background: #ccc;
+}
+.order-lists .order-summary:nth-child(odd) {
+	background: #eee;
+}
+.confirmation-form-footer  {
+	padding-top: 3px;
+	border-top: solid 2px $light-grey;
+	display: grid;
+	grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+}
+
+@media only screen and (max-width: 700px) {
+  .confirmation-form {
+    .confirmation-form-detail {
+      grid-template-columns: 1fr;
+    }
+    .confirmation-form-footer  {
+      border-top: solid 1px $light-grey;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      p {
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -3,7 +3,6 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import './NavBar.scss';
-import ShoppingBag from '../../shoppingBag/ShoppingBag';
 // import { getProductsByDepartment } from '../../../../actions/GetProducts';
 import './NavTopItems.scss';
 import { removeToken } from '../../../../config/localStorageConfig';
@@ -30,7 +29,14 @@ class NavTopItems extends Component {
   };
 
   render() {
-    const { authUser } = this.props;
+    let yourBag = 0;
+    const { authUser, shoppingCartItems } = this.props;
+    if (shoppingCartItems.length) {
+      shoppingCartItems.map((order) => {
+        yourBag += parseInt(order.subtotal, 10);
+        return true;
+      });
+    }
     return (
       <div className="nav-top-items">
         <div className="nav-auth-section">
@@ -46,25 +52,24 @@ class NavTopItems extends Component {
             : (
               <div>
                  hi!
-                {' '}
+                {'  '}
                 {authUser.name}
-                {' '}
-                <span onClick={() => this.logOut('signIn')}> logOut </span>
               </div>
             )
       }
         </div>
-        <div className="mt-1">
-          flag $
+        <div className="mt-1 your-bag">
+            Your bag:
+          {' '}
+          <span>
+            &#163;
+            { yourBag }
+          </span>
         </div>
-        <div
-          className="shopping-cart pr-3"
-          onClick={() => this.handleCartClick()}
-        >
-          <ShoppingBag position='top' />
-        </div>
-        <div className="mt-1">
-          <span> Your bag:</span>
+        <div className="text-right log-out">
+          { authUser.customer_id
+            ? <span onClick={() => this.logOut('signIn')}> logOut </span> : null
+        }
         </div>
       </div>
     );
@@ -73,6 +78,7 @@ class NavTopItems extends Component {
 
 const mapStateToProps = state => ({
   authUser: state.authUser.authUser,
+  shoppingCartItems: state.shoppingCart.cartItems,
 });
 
 export default connect(mapStateToProps)(NavTopItems);

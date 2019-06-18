@@ -5,7 +5,10 @@ import GetCategories from './GetCategories';
 import ProductReview from './ProductReview';
 import ShoppingCart from './ShoppingCart';
 import GetDepartments from './GetDepartments';
+import CustormerDeliveryDetails from './CustormerDeliveryDetails';
 import AuthUser from './authReducers/AuthUser';
+import StripeForm from './StripeForm';
+import Spinner from './Spinner';
 
 const rootReducer = combineReducers({
   departments: GetDepartments,
@@ -15,6 +18,9 @@ const rootReducer = combineReducers({
   toastr: toastrReducer,
   productReview: ProductReview,
   shoppingCart: ShoppingCart,
+  deliveryDetails: CustormerDeliveryDetails,
+  stripeForm: StripeForm,
+  spinner: Spinner,
 });
 
 

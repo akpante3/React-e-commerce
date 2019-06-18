@@ -26,7 +26,7 @@ class productFilter extends Component {
               backgroundColor: data.color,
             };
             return (
-              <div>
+              <div key={data.id}>
                 <ColorPick colorStyle={colorStyle} id={data.id} />
               </div>
             );

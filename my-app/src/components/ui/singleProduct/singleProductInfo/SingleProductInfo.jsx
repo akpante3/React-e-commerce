@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { toastr } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
 import StarRating from '../../starRatings/StarRatings';
 import { generateShoppingId, addToCart } from '../../../../store/actions/ShoppingCart';
@@ -24,21 +25,26 @@ class SingleProductInfo extends Component {
       product_id: singleproduct.product_id,
       attributes: this.state.attributes,
     };
+    if (!this.props.authUser.customer_id) {
+      toastr.error('An Error Occurred', 'you have to be a Registered user to add an item to cart');
+      return false;
+    }
     if (!cartId) {
       this.props.actions.generateShoppingId(productDetials);
     } else {
       this.props.actions.addToCart(productDetials);
     }
+    return true;
   }
 
   updateAttributes = (list) => {
     this.setState({ attributes: list.join(' ') });
-    console.log(this.state.attributes, 'these are attributes');
   }
 
   render() {
     const { singleproduct, productReview } = this.props;
-    const ratingCount = productReview.length ? productReview[1].rating : null;
+    const ratingCount = productReview.length && productReview[1].rating
+      ? productReview[1].rating : 1;
     return (
       <div>
         {
@@ -92,6 +98,7 @@ class SingleProductInfo extends Component {
 const mapStateToProps = state => ({
   singleproduct: state.products.singleProduct,
   productReview: state.productReview.reviews,
+  authUser: state.authUser.authUser,
 });
 
 const mapDispatchToProps = dispatch => ({

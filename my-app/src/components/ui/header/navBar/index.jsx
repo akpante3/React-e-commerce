@@ -61,7 +61,10 @@ class NavBar extends Component {
           />
         </div>
         <div className="navbar navbar-bottom">
-          <NavBottomItems />
+          <NavBottomItems
+            toggleAuthModal={this.toggleAuthModal}
+            toggleCartModal={this.toggleCartModal}
+          />
         </div>
       </div>
     );

@@ -28,11 +28,11 @@ render() {
 
   return (
     <div className="shopping-cart-product mb-3">
-      <div className="cart-product col-md-12 row">
-        <div className="cart-product-image col-md-3">
+      <div className="cart-product">
+        <div className="cart-product-image">
           <img src={`https://backendapi.turing.com/images/products/${cartItem.image}`} alt="Smiley face" />
         </div>
-        <div className="cart-product-details col-md-7">
+        <div className="cart-product-details">
           <span className="cart-item-name">{cartItem.name}</span>
           <div><span className="cart-remove-button" onClick={() => this.removeCartItem(cartItem.item_id)}>remove</span></div>
         </div>
@@ -40,10 +40,12 @@ render() {
       <div className="cart-product-size text-center">
         <span>{cartItem.attributes}</span>
       </div>
-      <QuantityController
-        updateCartItem={this.updateCartItem}
-        itemQuantity={quantity}
-      />
+      <div className="text-center cart-product-quantity">
+        <QuantityController
+          updateCartItem={this.updateCartItem}
+          itemQuantity={quantity}
+        />
+      </div>
       <div className="cart-product-price text-right">
         <span>{price}</span>
       </div>
