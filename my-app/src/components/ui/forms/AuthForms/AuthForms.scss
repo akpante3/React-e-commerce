@@ -1,0 +1,29 @@
+@import '../../../../styles//variables.scss';
+
+.sign-up-footer {
+  font-weight: 400;
+  padding: 0;
+  font-size: 16px;
+  color: $pink-color;
+  span {
+    color: $pink-color;
+    cursor: pointer;
+  }
+  span:hover {
+    color: $dark-pink;
+  }
+}
+.sign-in-footer {
+  margin: 0;
+  width: 100%;
+  div {
+    font-weight: 400;
+    padding: 0;
+    font-size: 16px;
+    color: $pink-color;
+    cursor: pointer;
+  }
+  div:hover {
+    color: $dark-pink;
+  }
+}

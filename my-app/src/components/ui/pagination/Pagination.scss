@@ -1,0 +1,11 @@
+.rc-pagination-item-active {
+    background-color: #f62f5e;
+    border-color: #f62f5e;
+}
+.rc-pagination-item {
+    border-radius: 50%;
+    a {
+      font-size: 16px;
+      font-weight: 400;
+    }
+}

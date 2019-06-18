@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+
+.sizes {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.size-option {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  display: inline-block
+}
+.size-button {
+  border-radius: 5px;
+  width: 60px;
+  padding: 0.5px 1px;
+  margin: 4px 4px;
+  transition: all 0.5s ease 0s;
+}
+.unselected-size {
+  background-color: $icon-background;
+  display: inline-block;
+  cursor: pointer;
+}
+.unselected-size:hover {
+  background-color: $light-grey;
+}
+.selected-size:hover {
+  background-color: $dark-pink; 
+}
+
+.selected-size {
+  background-color:  $pink-color;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}

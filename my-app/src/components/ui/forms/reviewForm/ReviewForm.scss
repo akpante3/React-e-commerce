@@ -1,0 +1,82 @@
+@import '../../../../styles/variables.scss';
+.review-form-section {
+  width: 100%;
+  .review-product {
+    textarea {
+      width: 500px;
+      height: 150px   
+    }
+  }
+  .review-button {
+    padding: 5px;
+    color: $white-color;
+    font-weight: 400;
+    font-size: 18px;
+    color: $pink-color;
+    transition: all 1s ease 0s;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .review-button:hover {
+    background-color: $pink-color;
+    color: $white-color;
+  }
+  .review-nickname {
+    input {
+      width: 350px
+    }
+  }
+}
+.review-input-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media only screen and (max-width: 900px) {
+  .review-form-section {
+    .review-product {
+      textarea {
+        width: 380px;
+        height: 150px   
+      }
+    }
+    .review-nickname {
+      input {
+        width: 250px
+      }
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .review-form-section {
+    .review-product {
+      textarea {
+        width: 200px;
+        height: 120px   
+      }
+    }
+    .review-nickname {
+      input {
+        width: 150px
+      }
+    }
+  }
+}
+@media only screen and (max-width: 330px) {
+  .review-form-section {
+    .review-product {
+      textarea {
+        width: 150px;
+        height: 100px   
+      }
+    }
+    .review-nickname {
+      input {
+        width: 150px
+      }
+    }
+  }
+  .review-input-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../../styles/variables.scss';
+.nav-top-items {
+  width:100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 10px 10px;
+  .nav-top-link {
+    margin: 0px 5px;
+    cursor: pointer;
+    // font-weight: 600;
+  }
+  .shopping-cart {
+    padding: 5px;
+  }
+  .nav-auth-section{
+    span {
+      color: $pink-color;
+      cursor: pointer;
+    }
+  }
+  .your-bag {
+    span {
+      color: $pink-color
+    }
+  }
+  .log-out {
+    span {
+      color: $pink-color;
+      cursor: pointer;
+    }
+  }
+  
+}

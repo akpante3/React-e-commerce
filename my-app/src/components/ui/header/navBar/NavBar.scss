@@ -1,0 +1,79 @@
+@import '../../../../styles/variables.scss';
+
+.navbar-top {
+  background-color: white;
+  color:black
+}
+.navbar-bottom {
+  background-color: $black;
+  color: white;
+}
+.nav-bottom-items {
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 52% 20% 8%;
+  .nav-bar-logo {
+    font-weight: 700;
+    font-size: 25px;
+    color: $pink-color
+  }
+  .nav-bottom-link {
+    margin: 0px 15px;
+    font-weight: 600;
+    font-size: 19px;
+  }
+}
+.navbar {
+  width: 100%;
+  position: relative;
+  padding: 5px 10px;
+  .search-bar {
+    position: relative;
+  }
+  .search-icon {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+  .nav-bar-logo {
+    color: $pink-color;
+    font-size: 30px;
+  }
+  input {
+    border-radius: 30px;
+    background-color: $light-grey;
+    color: white;
+    border: none;
+    text-indent: 27px;
+    height: 36px;
+    width: 300px;
+  }
+  ::placeholder {
+    color: white;
+    font-size: 16px;
+  }
+  ul {
+    li {
+      margin-left: 15px;
+      transition: all 0.5s ease 0s; 
+    }
+    li:hover{
+      color: $meduim-grey;
+    }
+  }
+
+  .nav-links {
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .nav-bar-logo {
+    cursor: pointer;
+  }
+  .nav-bar-logo:hover {
+    color: $dark-pink;
+  }
+}
+
+
+
