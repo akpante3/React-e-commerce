@@ -6,7 +6,7 @@ TshirtShop
 ## Vision
 Create a store that allows users to place an order for the Tshirt of their choice
 
-### The application can be found [**here**](https://tshirt-shop-client.herokuapp.com/)
+### The application can be found [**here**](https://e-commerce-clothing.herokuapp.com/)
 
 
 ## Getting Started
