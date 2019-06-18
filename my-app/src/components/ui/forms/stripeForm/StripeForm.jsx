@@ -31,7 +31,7 @@ class CheckoutForm extends Component {
          <div className="stripe-card-inputs">
            <div>
              <p>Card Owner*</p>
-             <input name='name' placeholder='email' type="text" onChange={this.onChangeHandler} className="" />
+             <input name='name' placeholder='name' type="text" onChange={this.onChangeHandler} className="" />
            </div>
            <div>
              <p>Card Owner*</p>

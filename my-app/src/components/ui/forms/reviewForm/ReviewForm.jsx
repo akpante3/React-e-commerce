@@ -36,7 +36,7 @@ class ReviewForm extends Component {
       <div className="review-form-section">
         <div className="users-review">
           <h5>Product Review</h5>
-          <div className="review-button" onKeyDown={this.toggleReview} onClick={() => this.toggleReview()}>{ showReviews ? 'Hide Reviews ' : 'Show Reviews' }</div>
+          <div className="review-button mb-5" onKeyDown={this.toggleReview} onClick={() => this.toggleReview()}>{ showReviews ? 'Hide Reviews ' : 'Show Reviews' }</div>
           <br />
           { showReviews
             ? reviews.map(review => (

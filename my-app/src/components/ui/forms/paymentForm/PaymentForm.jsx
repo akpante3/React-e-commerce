@@ -41,10 +41,10 @@ class PaymentForm extends Component {
             </div>
           </div>
           <div className="payment-image-wrapper text-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtCuuixqLoSdP8UsvLT_jO0uMq5jnouZIvETavpTE3UxzDimTl" alt="Smiley face" />
+            <img src="https://www.braintreepayments.com/images/logos/payment-methods/paypal-logo-block-7a37dfd0.svg" alt="Smiley face" />
             <div className="mt-2">
               <input type="radio" name="gender" value="male" />
-              <span className="mt-3">Pay $40</span>
+              <span className="mt-3">Pay $50</span>
             </div>
           </div>
         </div>
