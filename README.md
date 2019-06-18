@@ -1,5 +1,4 @@
 # turing-app
-[![Build Status](https://travis-ci.org/cwizard2011/turing-frontend.svg?branch=master)](https://travis-ci.org/cwizard2011/turing-frontend)
 
 TshirtShop
 
