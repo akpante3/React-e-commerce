@@ -14,7 +14,7 @@ Create a store that allows users to place an order for the Tshirt of their choic
 
 ### Prerequisites
 * Ensure [**Node JS**](https://nodejs.org/en/) is installed.
-* Clone the [**repository here**](https://github.com/cwizard2011/turing-frontend.git)
+* Clone the [**repository here**](https://github.com/akpante3/turing-app.git)
 * Navigate to the project directory `cd  turing-frontend`
 * Run `npm install` on the terminal to install dependecies
 
