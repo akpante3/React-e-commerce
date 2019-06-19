@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { generateShoppingId, getShoppingCartItems } from '../../../store/actions/ShoppingCart';
+import { generateShoppingId, getShoppingCartItems } from '../../../store/actions/shoppingCart';
 import ShoppingCartItem from './ShoppingCartItem';
 import './ShoppingCartItems.scss';
 

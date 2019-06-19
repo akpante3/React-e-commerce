@@ -4,13 +4,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import QuantityController from '../quantityController/QuantityController';
-import { deleteCartItem, updateCartItem } from '../../../store/actions/ShoppingCart';
+import { deleteCartItem, updateCartItem } from '../../../store/actions/shoppingCart';
 import './ShoppingCartItems.scss';
 
 class ShoppingCartItem extends Component {
-state = {
-
-}
+state = {}
 
 removeCartItem = (payload) => {
   this.props.actions.deleteCartItem(payload);

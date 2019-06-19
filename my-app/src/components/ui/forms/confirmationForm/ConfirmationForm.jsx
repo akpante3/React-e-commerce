@@ -3,18 +3,14 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { toastr } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
-import { getShoppingCartItems } from '../../../../store/actions/ShoppingCart';
+import { getShoppingCartItems } from '../../../../store/actions/shoppingCart';
 import 'react-input-range/lib/css/index.css';
 import './ConfirmationForm.scss';
 import Spinner from '../../Spinner/Spinner';
 
 
 class DeliveryForm extends Component {
-  state = {
-    // orders: [
-    //   ...this.props.shoppingCartItems,
-    // ],
-  }
+  state = {}
 
   componentDidMount() {
     const cartId = localStorage.getItem('cart_id');

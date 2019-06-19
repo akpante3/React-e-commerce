@@ -1,14 +1,14 @@
 import ACTIONS from '../actions/actionType';
 
 const initialState = {
-  spin: false,
+  error: false,
 };
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ACTIONS.SPIN:
+    case ACTIONS.CHECKOUT_ERROR:
       return {
         ...state,
-        spin: action.payload,
+        error: !state.error,
       };
     default:
       return state;

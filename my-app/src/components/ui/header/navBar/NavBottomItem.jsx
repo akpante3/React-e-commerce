@@ -8,8 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
 import ShoppingBag from '../../shoppingBag/ShoppingBag';
-import { getCategories } from '../../../../store/actions/GetCategories';
-import { getProductsByDepartment, searchProduct } from '../../../../store/actions/GetProducts';
+import { getCategories } from '../../../../store/actions/getCategories';
+import { getProductsByDepartment, searchProduct } from '../../../../store/actions/getProducts';
 
 
 /**

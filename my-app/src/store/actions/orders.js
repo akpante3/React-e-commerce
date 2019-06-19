@@ -1,7 +1,8 @@
 import { toastr } from 'react-redux-toastr';
 import axiosIntance from '../../config/http';
-import { stripeCharge } from './StripeForm';
+import { stripeCharge } from './stripeForm';
 import { getToken, setToken } from '../../config/localStorageConfig';
+import { errorResponse } from './responseMessage';
 
 const cartId = localStorage.getItem('cart_id');
 
@@ -16,4 +17,5 @@ export const createOrder = (stripeToken, grandTotal) => dispatch => axiosIntance
     dispatch(stripeCharge(stripeToken, response.data.orderId, grandTotal));
   }).catch(() => {
     toastr.error('An Error Occurred', 'input all valid credentials and try again');
+    dispatch(errorResponse());
   });

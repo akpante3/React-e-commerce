@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { toastr } from 'react-redux-toastr';
 import { bindActionCreators } from 'redux';
 import StarRating from '../../starRatings/StarRatings';
-import { generateShoppingId, addToCart } from '../../../../store/actions/ShoppingCart';
+import { generateShoppingId, addToCart } from '../../../../store/actions/shoppingCart';
 import ColorsPick from '../../colorsPick/ColorsPick/ColorsPick';
 import ProductSizes from '../../productSizes/ProductSizes';
 import QuantityController from '../../quantityController/QuantityController';

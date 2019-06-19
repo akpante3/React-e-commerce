@@ -15,7 +15,7 @@ import {
   getAllProducts,
   getProductsByCatergory,
   getProductsByDepartment,
-} from '../../../store/actions/GetProducts';
+} from '../../../store/actions/getProducts';
 
 
 class LandingPage extends Component {

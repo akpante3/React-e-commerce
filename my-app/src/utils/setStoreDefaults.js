@@ -1,7 +1,7 @@
 import jwtDecode from 'jwt-decode';
 import { getToken, removeToken } from '../config/localStorageConfig';
 import { authUser } from '../store/actions/authActions/AuthUser';
-import { getShoppingCartItems } from '../store/actions/ShoppingCart';
+import { getShoppingCartItems } from '../store/actions/shoppingCart';
 
 
 export default (store) => {

@@ -9,7 +9,7 @@ import { bindActionCreators } from 'redux';
 import PropsTypes from 'prop-types';
 import './ShoppingCartModal.scss';
 import AppButton from '../../buttons/AppButton/AppButton';
-import { generateShoppingId, getShoppingCartItems } from '../../../../store/actions/ShoppingCart';
+import { generateShoppingId, getShoppingCartItems } from '../../../../store/actions/shoppingCart';
 
 
 class ShoppingCartModal extends Component {

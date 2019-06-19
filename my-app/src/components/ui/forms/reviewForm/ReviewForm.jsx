@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import './ReviewForm.scss';
 import StarRating from '../../starRatings/StarRatings';
 import AppButton from '../../buttons/AppButton/AppButton';
-import { getProductReviews } from '../../../../store/actions/ProductReview';
+import { getProductReviews } from '../../../../store/actions/productReview';
 
 class ReviewForm extends Component {
   state = {

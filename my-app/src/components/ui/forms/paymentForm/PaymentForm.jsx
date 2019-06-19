@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { setToken, getToken } from '../../../../config/localStorageConfig';
 import CheckoutForm from '../stripeForm/StripeForm';
 import { createOrder } from '../../../../store/actions/orders';
-import { spinner } from '../../../../store/actions/Spinner';
+import { spinner } from '../../../../store/actions/spinner';
 import './PaymentForm.scss';
 
 
@@ -13,9 +13,6 @@ class PaymentForm extends Component {
   state = {
   }
 
-  onChangeHandler = () => {
-    console.log('hey');
-  }
 
   stripeTokenInfo = async (token) => {
     let grandtotal = 40;

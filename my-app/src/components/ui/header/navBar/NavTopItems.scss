@@ -34,7 +34,8 @@
 
 @media only screen and (max-width: 900px) {
   .nav-top-items {
-    grid-template-columns: 1fr 2fr 1fr;   
+    grid-template-columns: 2fr 2fr 1fr; 
+    grid-gap: 5%;  
   }
 }
 @media only screen and (max-width: 450px) {

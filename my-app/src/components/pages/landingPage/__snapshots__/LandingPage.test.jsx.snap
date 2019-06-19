@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test for ShoppingCartModal test for ShoppingCartModal 1`] = `
+exports[`test for LandingPage test for LandingPage 1`] = `
 <ContextProvider
   value={null}
 >

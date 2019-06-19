@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Header from '../../ui/header/Header';
 import Footer from '../../ui/footer';
-import { getDepartments } from '../../../store/actions/GetDepartments';
+import { getDepartments } from '../../../store/actions/getDepartments';
 import './MainLayout.scss';
 
 

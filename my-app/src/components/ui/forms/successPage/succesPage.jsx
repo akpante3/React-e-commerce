@@ -3,9 +3,9 @@ import { withRouter } from 'react-router-dom';
 import AppButtonLarge from '../../buttons/AppButton/AppButtonLarge';
 
 
-const SuccessPage = (props) => {
+const SuccessPage = () => {
   const homeButton = () => {
-    props.history.push('/');
+    window.location.href = '/';
   };
   const data = (
     <div className="text-center">

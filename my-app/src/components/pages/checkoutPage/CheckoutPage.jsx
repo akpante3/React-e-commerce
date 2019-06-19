@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-globals */
 import React, { Component } from 'react';
+import { toastr } from 'react-redux-toastr';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
@@ -10,14 +11,16 @@ import ComfirmationForm from '../../ui/forms/confirmationForm/ConfirmationForm';
 import PaymentForm from '../../ui/forms/paymentForm/PaymentForm';
 import MultiStep from '../../ui/multiStep/MultiStep';
 import { setToken, getToken } from '../../../config/localStorageConfig';
-import { updateUserDetails } from '../../../store/actions/CustormerDeliveryDetails';
-import { generateStripToken } from '../../../store/actions/StripeForm';
-import { spinner } from '../../../store/actions/Spinner';
+import { updateUserDetails } from '../../../store/actions/custormerDeliveryDetails';
+import { generateStripToken } from '../../../store/actions/stripeForm';
+import { spinner } from '../../../store/actions/spinner';
 import { validateFields } from '../../../helper/validateInputHelper';
 import Spinner from '../../ui/Spinner/Spinner';
 import SuccessPage from '../../ui/forms/successPage/succesPage';
+import { getShoppingCartItems } from '../../../store/actions/shoppingCart';
 
 import './CheckoutPage.scss';
+import { errorResponse } from '../../../store/actions/responseMessage';
 
 
 class CheckoutPage extends Component {
@@ -66,7 +69,7 @@ class CheckoutPage extends Component {
   }
 
   render() {
-    const { spin, stripeCharge } = this.props;
+    const { spin, stripeCharge, responseMessage } = this.props;
 
     const pages = [
       <DeliveryForm
@@ -78,6 +81,12 @@ class CheckoutPage extends Component {
     ];
 
     const multiCount = stripeCharge ? 3 : this.state.pageCount;
+    // relod page when there is an error in the stripe tranction
+    if (responseMessage.error) {
+      this.props.history.push('/checkout');
+      this.props.actions.errorResponse();
+      toastr.error('An Error Occurred', 'we are sorry your transaction could not be completed');
+    }
 
     return (
       <div>
@@ -140,11 +149,14 @@ class CheckoutPage extends Component {
 const mapStateToProps = state => ({
   stripeCharge: state.stripeForm.stripeCharge,
   spin: state.spinner.spin,
+  responseMessage: state.responseMessage,
 });
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(
-    { updateUserDetails, generateStripToken, spinner },
+    {
+      updateUserDetails, generateStripToken, spinner, errorResponse, getShoppingCartItems,
+    },
     dispatch,
   ),
 });

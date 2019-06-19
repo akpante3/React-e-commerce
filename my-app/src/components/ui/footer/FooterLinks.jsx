@@ -3,8 +3,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getCategories } from '../../../store/actions/GetCategories';
-import { getProductsByDepartment } from '../../../store/actions/GetProducts';
+import { getCategories } from '../../../store/actions/getCategories';
+import { getProductsByDepartment } from '../../../store/actions/getProducts';
 
 import './Footer.scss';
 

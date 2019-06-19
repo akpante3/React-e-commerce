@@ -1,26 +1,28 @@
 import { combineReducers } from 'redux';
 import { reducer as toastrReducer } from 'react-redux-toastr';
-import GetProducts from './GetProducts';
-import GetCategories from './GetCategories';
-import ProductReview from './ProductReview';
-import ShoppingCart from './ShoppingCart';
-import GetDepartments from './GetDepartments';
-import CustormerDeliveryDetails from './CustormerDeliveryDetails';
-import AuthUser from './authReducers/AuthUser';
-import StripeForm from './StripeForm';
-import Spinner from './Spinner';
+import getProducts from './getProducts';
+import getCategories from './getCategories';
+import productReview from './productReview';
+import shoppingCart from './shoppingCart';
+import getDepartments from './getDepartments';
+import custormerDeliveryDetails from './custormerDeliveryDetails';
+import authUser from './authReducers/AuthUser';
+import stripeForm from './stripeForm';
+import spinner from './spinner';
+import response from './responseMeassage';
 
 const rootReducer = combineReducers({
-  departments: GetDepartments,
-  products: GetProducts,
-  categories: GetCategories,
-  authUser: AuthUser,
+  departments: getDepartments,
+  products: getProducts,
+  categories: getCategories,
+  authUser,
   toastr: toastrReducer,
-  productReview: ProductReview,
-  shoppingCart: ShoppingCart,
-  deliveryDetails: CustormerDeliveryDetails,
-  stripeForm: StripeForm,
-  spinner: Spinner,
+  productReview,
+  shoppingCart,
+  deliveryDetails: custormerDeliveryDetails,
+  stripeForm,
+  spinner,
+  responseMessage: response,
 });
 
 

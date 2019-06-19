@@ -11,8 +11,8 @@ const mockStore = configureStore();
 let wrapper;
 let store;
 
-describe('test for ShoppingCartModal', () => {
-  it('test for ShoppingCartModal', () => {
+describe('test for LandingPage', () => {
+  it('test for LandingPage', () => {
     store = mockStore(initialState);
     wrapper = shallow(<LandingPage store={store} />);
     expect(wrapper).toMatchSnapshot();

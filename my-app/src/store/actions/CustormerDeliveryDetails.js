@@ -2,7 +2,7 @@ import { toastr } from 'react-redux-toastr';
 import axiosIntance from '../../config/http';
 import actionResponse from './actionResponse';
 import ACTIONS from './actionType';
-import { spinner } from './Spinner';
+import { spinner } from './spinner';
 
 
 /** updateUserDetails to update an authenticated user details

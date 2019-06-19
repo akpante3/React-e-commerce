@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { CSSTransition } from 'react-transition-group';
 import './SingleProductPage.scss';
 import SingleProductImage from '../../ui/singleProduct/singleProductImage/SingleProductImage';
-import { getAProduct } from '../../../store/actions/GetProducts';
+import { getAProduct } from '../../../store/actions/getProducts';
 import SingleProductInfo from '../../ui/singleProduct/singleProductInfo/SingleProductInfo';
 import ReviewForm from '../../ui/forms/reviewForm/ReviewForm';
 import Spinner from '../../ui/Spinner/Spinner';

@@ -7,7 +7,7 @@ import ProductSizes from '../../productSizes/ProductSizes';
 import PriceRange from '../../priceRange/PriceRange';
 import './ProductFilterCard.scss';
 import Appbutton from '../../buttons/AppButton/AppButton';
-import { getProductsByCatergory, getAllProducts } from '../../../../store/actions/GetProducts';
+import { getProductsByCatergory, getAllProducts } from '../../../../store/actions/getProducts';
 
 /** [productFilter]: contains content of filter card being diplayed on the landing page
  * state[categoryId]: id used to fetch category
