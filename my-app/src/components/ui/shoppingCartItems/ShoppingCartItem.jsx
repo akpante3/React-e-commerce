@@ -2,10 +2,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import QuantityController from '../quantityController/QuantityController';
 import { deleteCartItem, updateCartItem } from '../../../store/actions/ShoppingCart';
 import './ShoppingCartItems.scss';
-import { bindActionCreators } from '../../../../../../../../Library/Caches/typescript/3.1/node_modules/redux';
 
 class ShoppingCartItem extends Component {
 state = {
@@ -47,7 +47,10 @@ render() {
         />
       </div>
       <div className="cart-product-price text-right">
-        <span>{price}</span>
+        <span>
+          &#163;
+          {price}
+        </span>
       </div>
       <div />
     </div>

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test for AppButton test for AppLargeButton 1`] = `
+<button
+  className="app-button app-button-lg pink-button"
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`test for AppButton test for appButton 1`] = `
+<button
+  className="app-button app-button-md pink-button"
+  onClick={[Function]}
+  type="button"
+/>
+`;

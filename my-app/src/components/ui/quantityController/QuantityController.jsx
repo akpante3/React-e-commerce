@@ -30,11 +30,11 @@ class QuantityController extends Component {
 
   render() {
     return (
-      <div className="cart-product-quantity row">
-        <div className="product-quantity-controller text-center" onClick={() => this.handleQuantityCount('prev')}> - </div>
-        <div className="product-quantity text-center">{ this.props.itemQuantity || this.state.quantityCount}</div>
-        <div className="product-quantity-controller text-center" onClick={() => { this.handleQuantityCount('next'); }}> + </div>
-      </div>
+      <span className="cart-product-quantity row">
+        <span className="product-quantity-controller text-center" onClick={() => this.handleQuantityCount('prev')}> - </span>
+        <span className="product-quantity text-center">{ this.props.itemQuantity || this.state.quantityCount}</span>
+        <span className="product-quantity-controller text-center" onClick={() => { this.handleQuantityCount('next'); }}> + </span>
+      </span>
     );
   }
 }

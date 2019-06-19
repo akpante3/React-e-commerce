@@ -9,7 +9,7 @@ import './ShoppingBag.scss';
 const ShoppingBag = ({
   position, authUser, shoppingCartItems, handleCartClick,
 }) => (authUser.customer_id ? (
-  <div className="text-right shopping-bag-section">
+  <div className="shopping-bag-section">
     <div className={position === 'top' ? 'top-nav-count' : 'bottom-nav-count'}>
       <div className="cart-count text-center">
         <span>{ shoppingCartItems.length ? shoppingCartItems.length : 0 }</span>

@@ -3,6 +3,7 @@
 .shopping-bag-section {
   position: relative;
   cursor: pointer;
+  text-align: right;
   .shopping-bag {
     font-size: 22px;
     margin-top: 14px;
@@ -44,6 +45,33 @@
       .shopping-bag {
         color: black
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .shopping-bag-section {
+    text-align: left;
+    margin-top: 15px; 
+    .cart-count{
+      width: 24px;
+      border-radius: 50%;
+      position: absolute;
+      left: 2%;
+      bottom: 53%;
+      span {
+        // color: #f62e5e;
+        font-size: 14px;
+        font-weight: 700
+      }
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .landing-page {
+    width: 90%;
+    .landing-page-content {
+      grid-template-columns: 1fr;
     }
   }
 }

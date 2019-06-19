@@ -37,6 +37,7 @@
     width: 90%;
     .landing-page-content {
       grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 0.7em;
     }
   }
 }

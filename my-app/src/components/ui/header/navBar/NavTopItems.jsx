@@ -58,7 +58,7 @@ class NavTopItems extends Component {
             )
       }
         </div>
-        <div className="mt-1 your-bag">
+        <div className="your-bag">
             Your bag:
           {' '}
           <span>

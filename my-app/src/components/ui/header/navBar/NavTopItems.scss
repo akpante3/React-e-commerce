@@ -31,3 +31,17 @@
   }
   
 }
+
+@media only screen and (max-width: 900px) {
+  .nav-top-items {
+    grid-template-columns: 1fr 2fr 1fr;   
+  }
+}
+@media only screen and (max-width: 450px) {
+  .landing-page {
+    width: 90%;
+    .landing-page-content {
+      grid-template-columns: 1fr;
+    }
+  }
+}

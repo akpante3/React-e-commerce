@@ -10,7 +10,7 @@ export const getAllProducts = page => dispatch => axiosIntance.get(`/products?pa
   .then((response) => {
     dispatch(actionResponse(ACTIONS.GET_PRODUCTS, response.data));
   }).catch(() => {
-    toastr.error('An Error Occurred', 'input all valid credentials and try again');
+    toastr.error('An Error Occurred');
   });
 
 /** get product in department

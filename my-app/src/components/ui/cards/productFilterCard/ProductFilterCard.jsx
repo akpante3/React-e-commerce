@@ -11,6 +11,7 @@ import { getProductsByCatergory, getAllProducts } from '../../../../store/action
 
 /** [productFilter]: contains content of filter card being diplayed on the landing page
  * state[categoryId]: id used to fetch category
+ * state[selectedCategory]: filtered selected category
   */
 class productFilter extends Component {
   state = {

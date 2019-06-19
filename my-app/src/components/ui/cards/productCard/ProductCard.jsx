@@ -5,7 +5,10 @@ import { withRouter } from 'react-router-dom';
 import AppButton from '../../buttons/AppButton/AppButton';
 import './ProductCard.scss';
 
-
+/** ProductCard takes details of a particular product
+ * it displays the image and pice of the product
+ * props[product]: deatails of a product
+  */
 class ProductCard extends Component {
   state = {
     buttonVisibility: false,

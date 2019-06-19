@@ -50,7 +50,7 @@ class SingleProductInfo extends Component {
         {
         singleproduct.name && ratingCount
           ? (
-            <div>
+            <div className="single-poduct-info">
               <div>
                 <StarRating
                   count={ratingCount}
@@ -65,9 +65,11 @@ class SingleProductInfo extends Component {
                 <span>{singleproduct.price}</span>
                 <strike>{singleproduct.discounted_price}</strike>
               </div>
-              <div className='mt-3 single-product-color-pick'>
-                <p>Color</p>
-                <ColorsPick />
+              <div>
+                <div className='mt-3 single-product-color-pick'>
+                  <p>Color</p>
+                  <ColorsPick />
+                </div>
               </div>
               <div className='mt-4'>
                 <p>Size</p>
@@ -75,7 +77,7 @@ class SingleProductInfo extends Component {
                   updateAttributes={this.updateAttributes}
                 />
               </div>
-              <div className='mt-4'>
+              <div className='mt-4 quantity'>
                 <p>Quantity</p>
                 <QuantityController />
               </div>

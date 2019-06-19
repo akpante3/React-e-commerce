@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import { bindActionCreators } from 'redux';
 import ModalImage from '../../ui/modals/modalImage/ModalImage';
 import './LandingPage.scss';
+import AppButton from '../../ui/buttons/AppButton/AppButton';
 import ProductFilterCard from '../../ui/cards/productFilterCard/ProductFilterCard';
 import ProductCard from '../../ui/cards/productCard/ProductCard';
 import Pagination from '../../ui/pagination/Pagination';
@@ -40,7 +41,7 @@ class LandingPage extends Component {
 
   render() {
     const { products } = this.props;
-    return (products ? (
+    return (products.products ? (
       <CSSTransition
         in
         appear
@@ -50,7 +51,12 @@ class LandingPage extends Component {
         <div className="landing-page">
           <ModalImage
             image='https://raw.githubusercontent.com/zandoan/turing-uiux/master/Zeplin/Images/Images-modal4.png'
-            details={(<span>Mens wear</span>)}
+            details={(
+              <div>
+                <span>Mens wear</span>
+                <div><AppButton title='shop' /></div>
+              </div>
+            )}
           />
           <div className="landing-page-content mt-5">
             <div className="landing-filter-card">
