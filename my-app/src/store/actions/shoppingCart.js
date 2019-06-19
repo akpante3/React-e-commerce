@@ -54,7 +54,6 @@ export const deleteCartItem = itemId => dispatch => axiosIntance.delete(`shoppin
 export const updateCartItem = (itemId, quantity) => dispatch => axiosIntance.put(`/shoppingcart/update/${itemId}`,
   { item_id: itemId, quantity })
   .then((response) => {
-    console.log(response.data, 'this is updated cart items');
     dispatch(actionResponse(ACTIONS.CART_UPDATE, response.data));
   }).catch(() => {
     toastr.error('server Error');

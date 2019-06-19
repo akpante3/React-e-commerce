@@ -9,7 +9,7 @@ import custormerDeliveryDetails from './custormerDeliveryDetails';
 import authUser from './authReducers/AuthUser';
 import stripeForm from './stripeForm';
 import spinner from './spinner';
-import response from './responseMeassage';
+import response from './responseMessage';
 
 const rootReducer = combineReducers({
   departments: getDepartments,
