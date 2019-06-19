@@ -1,6 +1,6 @@
 # turing-app
 
-TshirtShop
+e-commerce-app
 
 
 ## Vision
