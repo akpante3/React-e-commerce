@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/akpante3/turing-app.svg?branch=develop)](https://travis-ci.org/akpante3/turing-app)
 
-# turing-app
+# e-commerce-React
 
 e-commerce-app
 
